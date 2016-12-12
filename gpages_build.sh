@@ -22,8 +22,8 @@ GH_REF="github.com/${TRAVIS_REPO_SLUG}"
 org=`echo ${TRAVIS_REPO_SLUG} | cut -f 1 -d /`
 repo=`echo ${TRAVIS_REPO_SLUG} | cut -f 2 -d /`
 
-name=$1
-email=$2
+name="Travis CI"
+email="builds@oneezy.com"
 branch=${3:-"master"} # default to master when branch isn't specified
 
 mkdir temp && cd temp
