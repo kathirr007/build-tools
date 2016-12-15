@@ -29,8 +29,17 @@ after_success:
   bower install -s oneezy/build-tools && ./bower_components/build-tools/gpages_build.sh;
   fi
 
-# DO EVERYTIME: 
-# travis encrypt GH_TOKEN=**************** --add  
-# env:
-#   global:
-#     secure: ZwNuFN1cryC5dff4c3a1qePkoRZoug+HDiN55dFATTt7Opk20C8SgO+RGEWqYWelFkUN2jhAyoJ91GFMxOyYqbqZP+mQfBaFWgBZoKIcGcDur5in4z6ZaWfw65X03K0HIaaKaunpO4C1d/d++zMhqvudhaJ4JgXJXts5cUdmXGxCIEhKE+mH5d76VK4fbpyrtpewllqHeaiIE88oFZ0L8xQP8K7SUXukvVmE1Re0Kl0UjXjsdSUftcj+gnOcBxqGjVlSjQ9Bk0zmP+2nHYo8Gx=
+#
+# 1.) Install Travis CLI:
+# 2.) Write command: travis encrypt GH_TOKEN=**************** --add  
+# 3.) Automate command inside .gitconfig so you don't have to remember the token value (optional)
+#
+#       [alias]
+#	      gh-token = "!travis encrypt GH_TOKEN=************************ --add"
+#
+# 4.) Secure Token Output
+#
+#       env:
+#          global:
+#             secure: ZwNuFN1cryC5dff4c3a1qePkoRZoug+HDiN55dFATTt7Opk20C8SgO+RGEWqYWelFkUN2jhAyoJ91GFMxOyYqbqZP+mQfBaFWgBZoKIcGcDur5...
+#
