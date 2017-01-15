@@ -22,7 +22,8 @@ install:
 - bower install
 
 script:
-- xvfb-run polymer test
+- chmod +x ./gpages_build.sh
+- "./gpages_build.sh"
 
 after_success:
 - if [ ${TRAVIS_PULL_REQUEST} = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
